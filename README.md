@@ -1,30 +1,48 @@
 ## PHP Technical test
 
-### 2.
+you might find this solution less shocking.
 
-Create a new Laravel project using composer
+## Requirements
 
-Attached you will find a DB dump and a .csv file. 
+Docker and Composer PHP
 
-Create a DB connection in laravel using the .env file. 
+## Installation
 
-Seed the DB based on the dump
+Do:
 
-In the resulted DB you will have these 1 table: `transactions`.
+```shell
+cp .env.example .env
+$composer install
+vendor/bin/sail up
 ```
-* transactions: id, code, amount, user_id, created_at, updated_at
+
+Seed the DB like this:
+
+```shell
+docker exec -ti bitpanda-task2 bash
+mysql -u root -h mysql laravel < transactions.sql 
+
 ```
 
-You have two sources. One DB and one is the .csv file
 
-Write two services(classes) that implement an interface which will allow you to retrieve the data. 
+## Usage
 
-1. Create an endpoint which will return the transactions in a json with an extra parameter which will specify the source
+`http://localhost/api/v1/transactions?source=[db|csv]`
 
-endpoints:
-* .../transactions?source=db
-* .../transactions?source=csv
+to see the results
 
-Some ideas:
-- you can create a factory to determine the class handler
-- you can also validate the source value and if the value is unknown throw an exception (eg: /transactions?source=html)
+### Directory Structure
+
+Similar to task 1, but this one I am respecting laravel skeleton and just building inside.
+
+I left all the garbage that Laravel gives and that it is not going to be used at all. I just lost
+the energy for doing things right.
+
+I am building though my development code in "src" like before, still trying to be independent
+of the framework.
+
+### comments
+
+You will see some comment in the controller, where there is some interesting logic. Instead of using
+a factory pattern I used something that looks like more a strategy pattern, but well, after all
+it's also a factory.
