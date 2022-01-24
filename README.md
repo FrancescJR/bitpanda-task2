@@ -8,8 +8,6 @@ Docker and Composer PHP
 
 ## Installation
 
-(I couldn't send the zip of this code through gmail because of either artisan, 
-or server.php files, gmail thinks it's a virus,  soI hid them inside app/, move them back)
 Do:
 
 ```shell
