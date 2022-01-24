@@ -8,6 +8,8 @@ Docker and Composer PHP
 
 ## Installation
 
+(I couldn't send the zip of this code through gmail because of artisan executable script
+, gmail thinks it's a virus, I hid it inside app/)
 Do:
 
 ```shell
