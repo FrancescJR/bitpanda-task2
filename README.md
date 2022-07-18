@@ -35,7 +35,7 @@ to see the results
 
 Similar to task 1, but this one I am respecting laravel skeleton and just building inside.
 
-I left all the garbage that Laravel gives and that it is not going to be used at all. I just lost
+I left all the stuff that Laravel gives and that it is not going to be used at all. I just lost
 the energy for doing things right.
 
 I am building though my development code in "src" like before, still trying to be independent
